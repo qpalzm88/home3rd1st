@@ -3,10 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AppDirective } from './app.directive';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatRippleModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,17 +15,19 @@ import { MatInputModule } from '@angular/material/input';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     MatAutocompleteModule,
-    MatFormFieldModule,
-    MatRippleModule,
     MatInputModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     BrowserModule,
+    BrowserAnimationsModule,
     MatAutocompleteModule,
-    MatFormFieldModule,
-    MatRippleModule,
-    MatInputModule,],
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule],
 
   providers: [],
   bootstrap: [AppComponent]
