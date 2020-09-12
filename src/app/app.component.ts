@@ -9,5 +9,7 @@ import {FormControl} from '@angular/forms';
 export class AppComponent {
   title = 'home3rd1st';
   myControl = new FormControl();
-  options: string[] = ['One', 'Two', 'Three'];
+  get options(): string[] {
+    return JSON.parse(localStorage.getItem('names')) || [];
+  }
 }
